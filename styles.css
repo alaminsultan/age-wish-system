@@ -1,0 +1,175 @@
+/* Fonts & Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Noto Sans Bengali", sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #f0f0f0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  cursor: none; /* Hide default cursor */
+  padding: 20px;
+}
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #e91e63;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  transition: transform 0.15s ease-out;
+  z-index: 9999;
+}
+
+/* Layout */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.logo {
+  width: 90px;
+  margin-bottom: 10px;
+}
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 6px;
+  color: #ff4081;
+  text-shadow: 0 0 10px #ff4081aa;
+}
+header p {
+  font-size: 1.1rem;
+  color: #bbb;
+}
+
+/* Main */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+/* Cards */
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px #ff4081aa;
+  backdrop-filter: blur(12px);
+  border: 1px solid #ff4081;
+  transition: box-shadow 0.3s ease;
+}
+.card:hover {
+  box-shadow: 0 0 45px #ff4081;
+}
+.card h2 {
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: #ff80ab;
+  text-align: center;
+}
+
+/* Inputs & Buttons */
+input[type="date"],
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 15px;
+  outline: none;
+  background: #222831;
+  color: #eee;
+  transition: background 0.3s ease;
+}
+input[type="date"]:focus,
+input[type="text"]:focus,
+textarea:focus {
+  background: #ff4081;
+  color: white;
+}
+textarea {
+  resize: vertical;
+  min-height: 70px;
+}
+
+button {
+  width: 100%;
+  padding: 15px 0;
+  background: #ff4081;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background 0.3s ease;
+}
+button:hover {
+  background: #f50057;
+}
+
+/* Result Boxes */
+.result-box,
+.wish-card {
+  margin-top: 20px;
+  background: #222831;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 20px #ff4081bb;
+  color: #ffc1e3;
+  text-align: center;
+}
+.result-box ul {
+  list-style: none;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.result-box ul li {
+  font-size: 1.2rem;
+  margin: 6px 0;
+}
+.hidden {
+  display: none !important;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Scrollbar for textarea */
+textarea {
+  scrollbar-width: thin;
+  scrollbar-color: #ff4081 #222831;
+}
+textarea::-webkit-scrollbar {
+  width: 8px;
+}
+textarea::-webkit-scrollbar-track {
+  background: #222831;
+}
+textarea::-webkit-scrollbar-thumb {
+  background-color: #ff4081;
+  border-radius: 20px;
+}

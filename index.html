@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>বয়স জানো + উইশ কর 🎉</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+
+    <header>
+      <h1>বয়স জানো + উইশ কর</h1>
+      <p>
+        জন্মতারিখ লিখে বয়স জেনে নাও, তারপর বন্ধুদের জন্য সুন্দর উইশ কার্ড তৈরি
+        করো।
+      </p>
+    </header>
+
+    <main>
+      <section class="age-calc-section card">
+        <h2>🎂 বয়স ক্যালকুলেটর</h2>
+        <label for="dob">জন্ম তারিখ:</label>
+        <input type="date" id="dob" />
+        <button id="calcAgeBtn">বয়স হিসেব করুন</button>
+
+        <div id="ageResult" class="result-box hidden">
+          <h3>তোমার বয়স</h3>
+          <ul>
+            <li><span id="years"></span> বছর</li>
+            <li><span id="months"></span> মাস</li>
+            <li><span id="days"></span> দিন</li>
+            <li><span id="hours"></span> ঘণ্টা</li>
+            <li><span id="minutes"></span> মিনিট</li>
+            <li><span id="seconds"></span> সেকেন্ড</li>
+          </ul>
+          <p id="nextBirthday"></p>
+        </div>
+      </section>
+
+      <section class="wish-maker-section card">
+        <h2>🎉 বন্ধুদের উইশ করো</h2>
+        <input type="text" id="friendName" placeholder="বন্ধুর নাম লিখুন" />
+        <input type="date" id="friendDob" />
+        <textarea
+          id="wishMessage"
+          placeholder="একটি শুভেচ্ছা মেসেজ লিখুন"
+        ></textarea>
+        <button id="generateWishBtn">উইশ কার্ড তৈরি করো</button>
+
+        <div id="wishCard" class="wish-card hidden">
+          <h1>🎊 শুভ জন্মদিন, <span id="wishName"></span>!</h1>
+          <p>🎂 জন্ম তারিখ: <span id="wishDate"></span></p>
+          <p id="wishText"></p>
+        </div>
+        <button id="downloadWishBtn" class="hidden">
+          ⬇️ PNG হিসেবে ডাউনলোড করো
+        </button>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Alamin Sultan | বয়স জানো + উইশ কর</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

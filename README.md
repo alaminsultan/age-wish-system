@@ -28,8 +28,6 @@ age-wish-system/
 ├── index.html # প্রধান HTML ফাইল
 ├── styles.css # CSS স্টাইলশীট
 ├── script.js # JavaScript লজিক (Age calculation, wish generation)
-├── gsap.min.js # GSAP লাইব্রেরি (CDN ব্যবহার করা যেতে পারে)
-├── logo.png # প্রজেক্ট লোগো
 └── README.md # এই ফাইল
 
 ```
@@ -73,7 +71,7 @@ age-wish-system/
 ## যোগাযোগ (Contact)
 
 - GitHub: [https://github.com/alaminsultan/age-wish-system](https://github.com/alaminsultan/age-wish-system)
-- Email: alamin@example.com (প্রয়োজনে বদলাতে হবে)
+- Email: contact@alaminsultan.com
 
 ---
 
